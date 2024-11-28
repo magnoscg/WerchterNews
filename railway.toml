@@ -1,0 +1,12 @@
+[build]
+builder = "nixpacks"
+buildCommand = "pip install -r requirements.txt"
+
+[deploy]
+startCommand = "python monitor.py"
+healthcheckPath = "/"
+healthcheckTimeout = 100
+
+[deploy.buildTimeCmds]
+- "python3 -m ensurepip --upgrade"
+- "pip3 install --upgrade pip"
