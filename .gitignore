@@ -28,9 +28,6 @@ var/
 .installed.cfg
 *.egg
 
-# Logs
-*.log
-
 # IDEs
 .idea/
 .vscode/
