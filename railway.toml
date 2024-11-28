@@ -9,6 +9,10 @@ healthcheckTimeout = 100
 nixPkgs = ["python311", "gcc"]
 
 [phases.install]
-cmds = ["python -m venv --copies /opt/venv && source /opt/venv/bin/activate && pip install -r requirements.txt"]
+cmds = ["pip install --upgrade pip && pip install -r requirements.txt"]
 
 [phases.build]
+cmds = []
+
+[variables]
+PYTHONUNBUFFERED = "1"
