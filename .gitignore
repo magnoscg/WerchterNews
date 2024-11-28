@@ -1,9 +1,20 @@
-*# Python
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Estado de la aplicación
+processed_news.json
+
+# Python
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
 .Python
+env/
+venv/
+ENV/
 build/
 develop-eggs/
 dist/
@@ -15,30 +26,15 @@ lib64/
 parts/
 sdist/
 var/
-wheels/
 *.egg-info/
 .installed.cfg
 *.egg
 
-# Environments
-.env
-.venv
-env/
-venv/
-ENV/
-
 # Logs
-logs/*
-!logs/.gitkeep
 *.log
-*.log.*
 
 # IDEs
 .idea/
 .vscode/
 *.swp
 *.swo
-
-# OS
-.DS_Store
-Thumbs.db
