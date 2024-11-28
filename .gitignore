@@ -3,8 +3,6 @@
 .env.*
 !.env.example
 
-# Estado de la aplicación
-processed_news.json
 
 # Python
 __pycache__/
