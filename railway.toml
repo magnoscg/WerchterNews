@@ -1,14 +1,14 @@
 [build]
 builder = "nixpacks"
-buildCommand = "pip install -r requirements.txt"
 
 [deploy]
-startCommand = "python monitor.py"
-healthcheckPath = "/"
+startCommand = "python3 monitor.py"
 healthcheckTimeout = 100
 
-[[build.buildTimeCmds]]
-command = "python -m ensurepip --upgrade"
+[phases.setup]
+nixPkgs = ["python311", "gcc"]
 
-[[build.buildTimeCmds]]
-command = "pip install --upgrade pip"
+[phases.install]
+cmds = ["python -m venv --copies /opt/venv && source /opt/venv/bin/activate && pip install -r requirements.txt"]
+
+[phases.build]
